@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#090b16">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23090b16'/%3E%3Ctext x='4' y='23' font-family='sans-serif' font-size='19' font-weight='900' fill='%23ff3d79'%3EFH%3C/text%3E%3C/svg%3E">
+  <title>FULL HOUSE // Neon Heat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game-shell" aria-label="Full House arcade game">
+    <canvas id="game" aria-label="Top down action game"></canvas>
+    <div class="scanlines" aria-hidden="true"></div>
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">FH</span><span>AFTERHOURS <b>ARCADE</b></span></div>
+      <div class="top-hint">WASD / ARROWS <i>•</i> CLICK TO FIRE <i>•</i> SPACE DASH</div>
+      <button id="sound-toggle" class="sound-button" aria-label="Toggle sound">♪ <span>SOUND ON</span></button>
+    </header>
+    <section id="intro" class="overlay">
+      <div class="intro-card">
+        <p class="eyebrow">MIAMI, 1989 &nbsp; / &nbsp; NIGHT SHIFT</p>
+        <h1>FULL<br><em>HOUSE</em></h1>
+        <div class="title-rule"><span></span><b>ONE NIGHT. NO WITNESSES.</b><span></span></div>
+        <p class="intro-copy">The whole crew is inside. Get in, clear the rooms, and make it back to the street.</p>
+        <button id="start-button" class="primary-button">START THE JOB <span>↗</span></button>
+        <div class="intro-foot"><span>MOVE <b>WASD</b></span><span>AIM <b>MOUSE</b></span><span>FIRE <b>CLICK</b></span><span>DASH <b>SPACE</b></span></div>
+      </div>
+      <div class="intro-stamp">VOL. 01<br><b>1989</b></div>
+    </section>
+    <section id="result" class="overlay hidden">
+      <div class="result-card">
+        <p id="result-kicker" class="eyebrow">JOB COMPLETE</p>
+        <h2 id="result-title">CLEAN<br><em>GETAWAY</em></h2>
+        <p id="result-copy">The night belongs to you.</p>
+        <div class="result-stats"><span>TIME <b id="result-time">00:00</b></span><span>SCORE <b id="result-score">000000</b></span><span>STREAK <b id="result-streak">x0</b></span></div>
+        <button id="retry-button" class="primary-button">RUN IT BACK <span>↻</span></button>
+      </div>
+    </section>
+    <aside id="hud" class="hud hidden">
+      <div class="hud-left"><div class="level-tag">STAGE 01 <span>—</span> FULL HOUSE</div><div class="objective"><span class="pulse-dot"></span><span id="objective-text">CLEAR THE BUILDING</span></div></div>
+      <div class="hud-center"><div id="timer">00:00</div><small>ELAPSED</small></div>
+      <div class="hud-right"><div class="score-label">SCORE</div><div id="score">000000</div><div class="combo" id="combo">STREAK <b>x0</b></div></div>
+      <div class="enemy-count"><span class="count-icon">✕</span><b id="enemy-count">08</b><small>HOSTILES</small></div>
+      <div class="weapon-indicator"><span class="weapon-icon">▰</span><span id="weapon-label">9MM / 12</span></div>
+      <div id="toast" class="toast"></div>
+    </aside>
+    <div id="mobile-controls" class="mobile-controls hidden">
+      <div class="stick-zone" id="stick-zone"><div class="stick-ring"><div id="stick-knob"></div></div><span class="stick-caption">MOVE</span></div>
+      <div class="mobile-actions"><button id="dash-button" class="action-button dash-action"><span>↯</span><small>DASH</small></button><button id="fire-button" class="action-button fire-action"><span>✦</span><small>FIRE</small></button></div>
+    </div>
+    <div id="rotate-hint" class="rotate-hint hidden">Landscape recommended <span>↻</span></div>
+    <div class="bottom-note"><span>NEON HEAT // 01</span><span>NO WAY OUT BUT THROUGH</span></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
